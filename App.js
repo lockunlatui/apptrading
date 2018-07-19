@@ -6,15 +6,16 @@ import { Provider } from 'react-redux';
 
 import Store from './src/store';
 
-import Home from './src/components/Home';
+import Login from './src/components/Login';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+    console.disableYellowBox = true;
     return (
       <Provider store={Store}>
-        <View>
-          <Home />
+        <View style={{ flex: 1}}>
+          <Login />
         </View>
       </Provider>
     );
